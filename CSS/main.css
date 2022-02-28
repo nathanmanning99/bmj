@@ -1,4 +1,3 @@
-
 /* CSS RESET */
 
 body {
@@ -24,35 +23,60 @@ ul {
 
 /* CSS RESET END */
 
-
 .container {
-    display: flex;
     margin-left: auto;
     margin-right: auto;
-    width: 50%;
+    width: 70%;
+}
+
+.info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
 }
 
 .columns {
     display: flex;
 }
 
-
 /* Mobile first apporach */
 [class*="col-"] {
     width: 100%;
-} 
+    padding: 5px;
+}
 
 .col-1 {
-    background-color: red;
+    background-color: #00FF00;
 }
 
 .col-2 {
-    background-color: blue;
+    color: #fff;
+    background-color: #E496D2;
 }
 
+.col-3 {
+    background-color: lightgray;
+    margin-top: 8px;
+}
+
+.col-3 p {
+    padding: 8px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .columns {
+        flex-wrap: wrap;
+    }
+}
+
+/* For desktop: */
 @media only screen and (min-width: 768px) {
 
-    /* For desktop: */
     .col-1 {
         width: 50%;
     }
@@ -62,9 +86,14 @@ ul {
     }
 }
 
-@media only screen and (max-width: 768px) {
-.container {
-    flex-wrap: wrap;
-    width: 90%;
+form ul {
+    padding: inherit;
 }
+
+.wrapper:first-of-type {
+    display: inline-block;
+}
+
+.wrapper:last-of-type {
+    display: inline;
 }
